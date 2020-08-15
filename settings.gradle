@@ -1,0 +1,5 @@
+rootProject.name="flowcov-camunda-examples"
+
+include ":simple-bpmn"
+
+project(":simple-bpmn").projectDir = new File("./simple-bpmn")

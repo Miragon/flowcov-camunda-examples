@@ -1,0 +1,31 @@
+version = '0.1.0'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test/java']
+        }
+        resources {
+            srcDirs = ['src/test/resources']
+        }
+    }
+}
+
+dependencies {
+
+    testImplementation 'org.camunda.bpm.assert:camunda-bpm-assert:7.0.0'
+    testImplementation 'org.assertj:assertj-core:3.16.1'
+
+}
+
+test {
+    useJUnit()
+}
