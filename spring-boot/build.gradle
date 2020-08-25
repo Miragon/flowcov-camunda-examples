@@ -21,8 +21,9 @@ sourceSets {
 
 dependencies {
 
-    testImplementation 'org.camunda.bpm.assert:camunda-bpm-assert:7.0.0'
-    testImplementation 'org.assertj:assertj-core:3.16.1'
+    implementation "org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-test:${camundaVersion}"
+    implementation "org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter:${camundaVersion}"
+    testImplementation 'cglib:cglib:2.2.2'
 }
 
 test {
