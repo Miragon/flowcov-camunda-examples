@@ -7,7 +7,7 @@ subprojects {
 
     group 'io.flowcov'
 
-    ext.flowCovVersion = '0.1.0'
+    ext.flowCovVersion = '0.1.1'
     ext.lombokVersion = '1.18.12'
     ext.camundaVersion = '7.13.0'
 

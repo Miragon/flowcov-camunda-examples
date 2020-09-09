@@ -5,7 +5,7 @@
     <bean id="processEngineConfiguration"
           class="io.flowcov.camunda.junit.rules.ProcessCoverageInMemProcessEngineConfiguration">
 
-        <property name="history" value="audit"/>
+        <property name="history" value="full"/>
         <property name="databaseSchemaUpdate" value="true"/>
         <property name="jobExecutorActivate" value="false"/>
         <property name="expressionManager">
