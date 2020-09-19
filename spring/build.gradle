@@ -23,7 +23,6 @@ dependencies {
 
     implementation "org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-test:${camundaVersion}"
     implementation "org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter:${camundaVersion}"
-    testImplementation 'cglib:cglib:2.2.2'
 }
 
 test {

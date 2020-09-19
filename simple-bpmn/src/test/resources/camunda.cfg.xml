@@ -3,7 +3,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="processEngineConfiguration"
-          class="io.flowcov.camunda.junit.rules.ProcessCoverageInMemProcessEngineConfiguration">
+          class="io.flowcov.camunda.junit.ProcessCoverageInMemProcessEngineConfiguration">
 
         <property name="history" value="full"/>
         <property name="databaseSchemaUpdate" value="true"/>
