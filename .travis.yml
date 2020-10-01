@@ -1,0 +1,19 @@
+dist: xenial
+git:
+  depth: false
+env:
+  global:
+  - secure: 0Sm/9fTeR5PXRY/v/7+ThqGi0NLGsFDhwVOWLTuD3cLkvoXB0rfVfJBN67Jl1xlajMPin+OK3ZbgKi5scWUGkQGtqiBnhX4jkBZSu16PLvOs3iJWa4N3fMBiDYhljCrSZmqQdjG5NvQb9U18aBuTijmTG7xGpdvzr9+hT1dSQHVhQ01lqnGPlhgE0joqZu2Y+HXiKr5UyAqxRyZLP2kwuPUuKQLdYamDvGSr2bEfi3gZ9fMEvuyl4VIrOm2WueL9Xpm54zb2W83k4lXCo64086E10N0SEllQGqMwu57YC9sQXEoZWVCJG6gMgpcacOYvnI+Ev4Sz22D+kjFO7NBUBIDgrNPXw//f9LAJLlzmKClUHghoTIwVw6vM0UhytKw4HlC+KocH8Nwcq44uznYokaB9VywpRyl+CZ5sytk3wrCrlOhSqyQJ5UuiBBD/70PAYCrCr4lmfEAkT9tDx+1RtrGochEFCW+9NdbL/FgZS+230wY1cseh4+ObkmWSK/kFDp7QM6rqylBuQ9NMcdofvo6LBZ+ShYVGpD4tfUj88fdwzle4SFLxYoJPrsDQplg+86rClekAyK2TrGFzKtITt6N4CnTt+7k+VQ3i326LOJm/fQP/5h/o2uqEQddpu8AuJsS7NAPKQIJBDaIrIk+VpUT5PlZaYhYA3hm90YzZj4c=
+  - secure: Zve86zhVR/456sjm1AhzH2HQWJl8jtsuCo6yqEPJ1VSIFor6uFKRXEnHNb9mIyBdto+u1Re9iTA7KyyXvvxmw1kDr5O0I68hWWCO1UHkqHJZqunf3P5p+VK+tdQUmW1MKKYcvlS/1CzjpKc48p081Ow+wnSarCVvoUDlW+hipz4JlCoe+Ov7syKsn0+h/F6NyOsV02DeKbvIXhhtEEoN5m7Ha1U8bPl0Tt9O628e0ZE+uSkHfqInOweJjOd8UjNSpgd0MHv47M7eJ/tQ7K4zcj8lR4wFebD9ZDqeyC5xgYNmIl0RHWeoqQ1djjngjmtGdbKCc3ohAFKvjXylYv8csT9VDTgpbY4aAAeFuWeT/bsweQbFCBtL+nkDllHS1V0+kUe87uCbvtGpX47zNyoiGI6BMoxGf0b2MYAwLwOWXygANcZ5AtrssVIFwECbe8VFNWy5ycL85yBP5fI/hf4sMsSEjO9zvI2OMSvdRAuZz3tYSxnppgSxKBUqg2BTViHK2XGpH4fnRDyIXgByVK98duUdYbOQ+/NH2eAStWy+RSPbluh9yrftMFR5YkbiWI9Onmt8tYPnHH26R6mQiafiq6XPl96iUcN2kafTY4FNe5BdSa7CN+5Uzp1UKWIT+d4ggWE79rHMJbBhknrJIAh80CIhQWGsDMFOlheY53HmN2I=
+language: java
+jdk:
+- openjdk11
+after_success:
+- ./flowcov.sh --repository-id $FLOWCOV_REPOSITORY_ID --api-key $FLOWCOV_API_KEY
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
