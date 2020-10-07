@@ -1,11 +1,9 @@
 version: 2
-
 workflows:
   examples:
     jobs:
       - build:
           context: flowcov
-
 jobs:
   build:
     docker:
