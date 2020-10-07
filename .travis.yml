@@ -8,7 +8,7 @@ jdk:
 - openjdk11
 after_success:
 - |
-  bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0)
+  bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0) -v
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
