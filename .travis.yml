@@ -8,12 +8,7 @@ jdk:
 - openjdk11
 after_success:
 - |
-  curl -so flowcov.sh https://raw.githubusercontent.com/FlowSquad/flowcov-bash/master/flowcov.sh;
-  chmod +x ./flowcov.sh;
-  ./flowcov.sh \
-    --repository-id $FLOWCOV_REPOSITORY_ID \
-    --api-key $FLOWCOV_API_KEY \
-    --branch-name $TRAVIS_BRANCH;
+  bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0)
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
