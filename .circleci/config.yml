@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11-jdk
+    working_directory: ~/repo
+    environment:
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+    steps:
+      - checkout
+      - run: gradle build
+      - run: gradle test
+      - run: bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0) -v
