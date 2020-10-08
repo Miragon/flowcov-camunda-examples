@@ -2,18 +2,9 @@ image: circleci/openjdk:11-jdk
 
 stages:
   - build
-  - upload
 
 build:
   stage: build
-  artifacts:
-    untracked: true
   script:
     - ./gradlew build
-
-upload:
-  stage: upload
-  dependencies:
-    - build
-  script:
-    - bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0) -v -d
+    - bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0) -v
