@@ -17,4 +17,4 @@ jobs:
     steps:
       - checkout
       - run: gradle build
-      - run: bash <(curl -s https://bash.flowcov.io/prepare-v0.3.0) -v
+      - run: bash <(curl -s https://bash.flowcov.io)
