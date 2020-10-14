@@ -1,0 +1,10 @@
+image: circleci/openjdk:11-jdk
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - ./gradlew build
+    - bash <(curl -s https://bash.flowcov.io)
