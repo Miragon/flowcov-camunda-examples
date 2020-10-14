@@ -47,7 +47,7 @@ public class SpringBootProcessTest {
     @Autowired
     private ProcessEngine processEngine;
 
-    private static final String PROCESS_KEY = "StartWithFlowCov";
+    private static final String PROCESS_KEY = "StartWithFlowCovAndSpringBoot";
     private static final String TASK_REGISTER = "Task_RegisterOnFlowCov";
     private static final String TASK_INSTALL = "Task_InstallOnPremise";
     private static final String TASK_CREATE_REPOSITORY = "Task_CreateRepository";
