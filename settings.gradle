@@ -17,9 +17,13 @@
 rootProject.name = "flowcov-camunda-examples"
 
 include ":simple-bpmn"
-
 project(":simple-bpmn").projectDir = new File("./simple-bpmn")
 
 include ":spring"
-
 project(":spring").projectDir = new File("./spring")
+
+include ":dmn"
+project(":dmn").projectDir = new File("./dmn")
+
+include ":spring-boot"
+project(":spring-boot").projectDir = new File("./spring-boot")

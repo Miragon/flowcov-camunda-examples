@@ -23,7 +23,7 @@ subprojects {
 
     group 'io.flowcov'
 
-    ext.flowCovVersion = '0.2.0'
+    ext.flowCovVersion = '0.2.1'
     ext.lombokVersion = '1.18.12'
     ext.camundaVersion = '7.13.0'
 
@@ -36,11 +36,11 @@ subprojects {
 
     dependencies {
 
-        implementation "io.flowcov:flowcov-camunda-core:${flowCovVersion}"
-        implementation "org.camunda.bpm:camunda-engine:${camundaVersion}"
+        testImplementation "io.flowcov:flowcov-camunda-core:${flowCovVersion}"
+        testImplementation "org.camunda.bpm:camunda-engine:${camundaVersion}"
 
-        implementation 'junit:junit:4.12'
-        implementation 'com.h2database:h2:1.3.168'
+        testImplementation 'junit:junit:4.12'
+        testImplementation 'com.h2database:h2:1.3.168'
 
 
         / * Lombok dependencies * /
