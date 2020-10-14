@@ -37,7 +37,7 @@ import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.*;
 @SpringBootTest(classes = {Application.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 @ActiveProfiles("test")
-@Deployment(resources = {"bpmn/StartWithFlowCov.bpmn", "dmn/DecideOnUsage.dmn"})
+@Deployment(resources = {"bpmn/StartWithFlowCovAndSpringBoot.bpmn", "dmn/DecideOnUsage.dmn"})
 public class SpringBootProcessTest {
 
     @Rule

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1vkvgtx" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.0.0">
-  <bpmn:process id="StartWithFlowCov" isExecutable="true">
+  <bpmn:process id="StartWithFlowCovAndSpringBoot" isExecutable="true">
     <bpmn:startEvent id="StartEvent_TraceabilityWanted" name="Traceability during testing wanted">
       <bpmn:outgoing>Flow_0vayiki</bpmn:outgoing>
     </bpmn:startEvent>
